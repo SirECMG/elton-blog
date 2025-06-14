@@ -1,0 +1,34 @@
+site_name: SirECMG
+site_url: https://www.eltonmurillo.com
+site_description: A blog static website for elton technical topics
+theme:
+  name: material
+  features:
+    # table of content configuration https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#table-of-contents
+    - toc.integrate
+    - toc.follow
+
+  # set-up for dark theme
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+  # search configuration https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/?h=search#setting-up-site-search
+  - search
