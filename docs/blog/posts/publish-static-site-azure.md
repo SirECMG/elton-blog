@@ -13,9 +13,9 @@ draft: true
 
 
 ## reference doc
-[reference doc](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-jekyll)
+- [reference doc](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-jekyll)
 
 ## update domain
 
-[internal domain](https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain)
-[external domain](https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain-external)
+- [internal domain](https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain)
+- [external domain](https://learn.microsoft.com/en-us/azure/static-web-apps/custom-domain-external)

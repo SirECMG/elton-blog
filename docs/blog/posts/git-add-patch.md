@@ -28,5 +28,5 @@ git commit
 
 ## references
 
-[git add patch youtube video](https://www.youtube.com/@typecraft_dev/videos)
-[pro git](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)
+- [git add patch youtube video](https://www.youtube.com/@typecraft_dev/videos)
+- [pro git](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)
