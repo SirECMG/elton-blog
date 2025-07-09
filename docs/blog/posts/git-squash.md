@@ -2,7 +2,7 @@
     date: 2025-07-08
 ---
 
-# git squash tutorial
+# git squash
 
 1. checkout feature branch
 ```
