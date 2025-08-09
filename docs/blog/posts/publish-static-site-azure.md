@@ -1,6 +1,5 @@
 ---
 date: 2025-06-14
-draft: true
 ---
 
 # publish static website to azure
