@@ -40,4 +40,4 @@ draft: true
 
 
 ## references
-[original guide to create post using mkdocs-material](https://squidfunk.github.io/mkdocs-material/tutorials/blogs/basic/)
+- [original guide to create post using mkdocs-material](https://squidfunk.github.io/mkdocs-material/tutorials/blogs/basic/)
