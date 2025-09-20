@@ -2,30 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.eltonmurillo.com/</loc>
-         <lastmod>2025-08-09</lastmod>
-    </url>
-    <url>
-         <loc>https://www.eltonmurillo.com/blog/git-ammend-commit/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
     </url>
     <url>
          <loc>https://www.eltonmurillo.com/blog/posts/add-new-repo-github/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
     </url>
     <url>
          <loc>https://www.eltonmurillo.com/blog/posts/create-post-mkdocs/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
     </url>
     <url>
          <loc>https://www.eltonmurillo.com/blog/posts/git-add-patch/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.eltonmurillo.com/blog/posts/git-ammend-commit/</loc>
+         <lastmod>2025-09-20</lastmod>
     </url>
     <url>
          <loc>https://www.eltonmurillo.com/blog/posts/git-squash/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.eltonmurillo.com/blog/posts/how-to-read-file-in-c/</loc>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.eltonmurillo.com/blog/posts/how-to-write-to-file-in-c/</loc>
+         <lastmod>2025-09-20</lastmod>
     </url>
     <url>
          <loc>https://www.eltonmurillo.com/blog/posts/publish-static-site-azure/</loc>
-         <lastmod>2025-08-09</lastmod>
+         <lastmod>2025-09-20</lastmod>
+    </url>
+    <url>
+         <loc>https://www.eltonmurillo.com/blog/posts/why-elixir/</loc>
+         <lastmod>2025-09-20</lastmod>
     </url>
 </urlset>
