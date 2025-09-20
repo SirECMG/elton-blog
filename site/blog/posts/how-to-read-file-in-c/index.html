@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://www.eltonmurillo.com/blog/posts/git-add-patch/">
+        <link rel="canonical" href="https://www.eltonmurillo.com/blog/posts/how-to-read-file-in-c/">
       
       
-        <link rel="prev" href="../create-post-mkdocs/">
+        <link rel="prev" href="../git-squash/">
       
       
-        <link rel="next" href="../git-ammend-commit/">
+        <link rel="next" href="../how-to-write-to-file-in-c/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>git add --patch - SirECMG</title>
+        <title>How to read file in c - SirECMG</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-add-patch" class="md-skip">
+        <a href="#thoughts" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              git add --patch
+              How to read file in c
             
           </span>
         </div>
@@ -391,32 +391,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    git add --patch
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../git-add-patch/" class="md-nav__link">
         
   
   
@@ -427,62 +405,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#select-lines-of-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      select lines of code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-hunks" class="md-nav__link">
-    <span class="md-ellipsis">
-      edit hunks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#write-your-commit-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      write your commit message
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      references
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -538,10 +460,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../how-to-read-file-in-c/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How to read file in c
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -552,6 +494,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thoughts
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -657,27 +626,35 @@
 
 
 
-<h1 id="git-add-patch">git add --patch</h1>
-<p>This command allows you to concisely add lines of code to a commit.</p>
-<pre><code>git add --patch
+  <h1>How to read file in c</h1>
+
+<p>The following code snippet goes over how to read a file in C.</p>
+<pre><code class="language-C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main() {
+
+    FILE *fptr; // 1. create an empty pointer
+    fptr = fopen(&quot;input.txt&quot;, &quot;r&quot;); //2. use fopen(name, read access) to read a target file
+    if (fptr == NULL) { // 3. check if fptr is null before proceeding
+        perror (&quot;input.txt&quot;);
+        return -1; // return failure
+    }
+
+    char my_string[1024]; // 4. allocate a temporary character array of 1024 bytes
+    while(fgets(my_string, 1024, fptr) != NULL) { // 5. sets the current line of 1024 bytes to my_string
+        printf(&quot;%s&quot;, my_string); // 6. print
+    }
+
+    fclose(fptr); // 7. close fptr
+    return 0; // 8. return 0 for success (non-zero are failures)
+}
 </code></pre>
-<h2 id="select-lines-of-code">select lines of code</h2>
-<p>You will then select lines of code that matter to the commit. Each sections of code shown is a <strong>hunk</strong>.</p>
-<ul>
-<li>select 'y' to agree to add hunk</li>
-<li>select 'n' to ignore hunk</li>
-</ul>
-<h2 id="edit-hunks">edit hunks</h2>
-<p>If there is a line of code that does not fit in the hunk. You have to select 'e' to edit the hunk.
-Remove lines of code that don't matter by deleting it.</p>
-<h2 id="write-your-commit-message">write your commit message</h2>
-<pre><code>git commit
-</code></pre>
-<h2 id="references">references</h2>
-<ul>
-<li><a href="https://www.youtube.com/@typecraft_dev/videos">git add patch youtube video</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">pro git</a></li>
-</ul>
+<h2 id="thoughts">Thoughts</h2>
+<p>C is a language in which you have to think in terms of the machine. You are dealing with memory, so allocating need to be precise, lengths need to be correct, null checking, and freeing memory need to be correct.
+Defensive programming is important. When coming up with the solution that is very important.</p>
+<p>The second consideration is the actual problem itself. In other languages it is easier to solve a solution to problem first, but not in C.</p>
+<p>Which makes C a great language to get better at implementation as it forces you to become a defensive programmer when implementing a solution.</p>
 
 
 
