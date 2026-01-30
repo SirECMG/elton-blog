@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://www.eltonmurillo.com/blog/posts/git-add-patch/">
+        <link rel="canonical" href="https://www.eltonmurillo.com/blog/posts/git-ammend-commit/">
       
       
-        <link rel="prev" href="../create-post-mkdocs/">
+        <link rel="prev" href="../git-add-patch/">
       
       
-        <link rel="next" href="../git-ammend-commit/">
+        <link rel="next" href="../git-squash/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>git add --patch - SirECMG</title>
+        <title>How to ammend a commit - SirECMG</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#git-add-patch" class="md-skip">
+        <a href="#how-to-ammend-a-commit" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              git add --patch
+              How to ammend a commit
             
           </span>
         </div>
@@ -391,6 +391,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-add-patch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    git add --patch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -403,99 +426,7 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    git add --patch
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    git add --patch
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#select-lines-of-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      select lines of code
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edit-hunks" class="md-nav__link">
-    <span class="md-ellipsis">
-      edit hunks
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#write-your-commit-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      write your commit message
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      references
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../git-ammend-commit/" class="md-nav__link">
         
   
   
@@ -506,6 +437,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -657,26 +589,20 @@
 
 
 
-<h1 id="git-add-patch">git add --patch</h1>
-<p>This command allows you to concisely add lines of code to a commit.</p>
-<pre><code>git add --patch
+<h1 id="how-to-ammend-a-commit">How to ammend a commit</h1>
+<p>below are quick steps for when you want to modify a previous commit.</p>
+<pre><code>git add .
 </code></pre>
-<h2 id="select-lines-of-code">select lines of code</h2>
-<p>You will then select lines of code that matter to the commit. Each sections of code shown is a <strong>hunk</strong>.</p>
+<pre><code>git commit --amend
+</code></pre>
 <ul>
-<li>select 'y' to agree to add hunk</li>
-<li>select 'n' to ignore hunk</li>
+<li>an editor will pop-up and you can modify the commit message if needed</li>
+<li>as a result, no new commits will be added, instead will modify the previous commit.</li>
 </ul>
-<h2 id="edit-hunks">edit hunks</h2>
-<p>If there is a line of code that does not fit in the hunk. You have to select 'e' to edit the hunk.
-Remove lines of code that don't matter by deleting it.</p>
-<h2 id="write-your-commit-message">write your commit message</h2>
-<pre><code>git commit
+<pre><code>git push --force
 </code></pre>
-<h2 id="references">references</h2>
 <ul>
-<li><a href="https://www.youtube.com/@typecraft_dev/videos">git add patch youtube video</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">pro git</a></li>
+<li>This will overwrite the remote branch, so becareful.</li>
 </ul>
 
 
